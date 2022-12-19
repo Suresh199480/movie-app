@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #191970;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    transition: all 1s ease;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    margin: 0 40px 0 0;
+}
+
+.nav-menu .nav-item .nav-link {
+    color: #fff;
+    font-size: 20px;
+}
+
+.hamburger div {
+    width: 32px;
+    height: 3px;
+    margin: 0.4rem 40px 0.4rem 0.4rem;
+    background-color: #fff;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+
+/***---Responsiveness Media Queries---***/
+
+@media(max-width:768px) {
+    .nav-menu {
+        position: absolute;
+        top: 100px;
+        /*right: 0;*/
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: #191970;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /*transform: translateX(100%);*/
+        transition: all 1s ease;
+        margin: 0 0 0 0;
+        z-index: 999;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-menu.active {
+        /*transform: translateX(0%);*/
+        right: 0;
+    }
+    .hamburger.toggle .line-1 {
+        transform: rotate(-45deg) translate(-8px, 5px);
+        transition: all 1s ease;
+    }
+    .hamburger.toggle .line-2 {
+        opacity: 0;
+    }
+    .hamburger.toggle .line-3 {
+        transform: rotate(45deg) translate(-8px, -5px);
+        transition: all 1s ease;
+    }
+}
+
+
+/***----- Hero Section -----****/
+
+.hero-container {
+    background: #053A66;
+    overflow: hidden;
+}
+
+.hero-container img {
+    margin: 30px auto;
+    width: 100%;
+}
+
+
+/**** ---- Home Section --- ****/
+
+.home-section {
+    margin-top: 30px;
+}
+
+
+/**** ---- Image Links Section ---- ****/
+
+.imgurl-section {
+    margin-top: 30px;
+}
+
+.imgurl-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgurl-container .images {
+    margin: 15px 10px;
+    position: relative;
+}
+
+.imgurl-container .images img {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.img-title {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 100px;
+    display: none;
+}
+
+.imgurl-container .images:hover .img-title {
+    display: block;
+    transition: all .7s ease-in;
+}
+
+.download-btn-sec {
+    margin-top: 30px;
+}
+
+.download-button {
+    background-color: #ffd700;
+    color: #191919;
+    padding: 12px 32px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/*** ------- About Section ------ ****/
+
+.about-section {
+    margin-top: 50px;
+}
+
+.about-container .row .left img,
+.about-container .row .right-two img,
+.about-container .row .left-three img {
+    width: 100%;
+}
+
+.about-container .row .right h5,
+.about-container .row .left-two h5,
+.about-container .row .right-three h5 {
+    color: #ffd700;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.about-container .row .right h3,
+.about-container .row .left-two h3,
+.about-container .row .right-three h3 {
+    margin-top: 10px;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.row-two,
+.row-three,
+.row-four,
+.row-five,
+.row-six,
+.row-seven,
+.row-eight,
+.row-nine,
+.row-ten,
+.row-eleven,
+.row-twelve {
+    margin-top: 50px;
+}
+
+.row-four img,
+.row-five img,
+.row-six img,
+.row-seven img,
+.row-eight img,
+.row-nine img,
+.row-ten img,
+.row-eleven img,
+.row-twelve img {
+    width: 100%;
+}
+
+.hr {
+    border-top: 5px dashed #fff;
+    color: #fff;
+    background-color: #fff;
+}
+
+
+/*****-------   Responsiveness Media Query   ------******/
+
+@media(max-width:768px) {
+    .about-container .row .right {
+        margin-top: 30px;
+    }
+    .row-four .right-four,
+    .row-five .right-five,
+    .row-six .right-six,
+    .row-seven .right-seven,
+    .row-eight .right-eight,
+    .row-nine .right-nine,
+    .row-ten .right-ten,
+    .row-eleven .right-eleven,
+    .row-twelve .right-twelve {
+        margin-top: 20px;
+    }
+}
+
+
+/*** Footer Section ***/
+
+.footer-section {
+    margin-top: 20px;
+}
+
+.footer-section .fa-heart {
+    color: red;
+}
+
+
+/*** ----- Movies Page and TV Shows Page ----- ****/
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container .search {
+    margin-top: 30px;
+    width: 300px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.search-container .search:focus {
+    outline: none;
+}
+
+.fa-search {
+    color: #191919;
+    position: absolute;
+    top: 50%;
+    right: 37%;
+    transform: translate(-50%, -20%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/**** ----- Movies Section and TV Shows Section---- ***/
+
+.movie-card-container,
+.tv-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card-container a,
+.tv-card-container a {
+    text-decoration: none;
+}
+
+.movie-card,
+.tv-card {
+    width: 175px;
+    height: 370px;
+    border: 1px solid #C0C0C0;
+    overflow: hidden;
+    margin: 5px 5px;
+    background: #fff;
+    color: #191919;
+    border-radius: 10px;
+}
+
+.movie-card img,
+.tv-card img {
+    width: 100%;
+}
+
+.movie-card-title,
+.tv-card-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/*** ---- Responsiveness Movies and TV Shows ---- ***/
+
+@media(max-width:480px) {
+    .fa-search {
+        right: 18%;
+    }
+    .movie-card,
+    .tv-card {
+        width: 140px;
+        height: 335px;
+    }
+}
+
+@media(max-width:414px) {
+    .fa-search {
+        right: 12%;
+    }
+    .movie-card,
+    .tv-card {
+        width: 100px;
+        height: 240px;
+    }
+    .movie-card-title,
+    .tv-card-title {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:320px) {
+    .fa-search {
+        right: 0;
+    }
+    .movie-card,
+    .tv-card {
+        width: 85px;
+        height: 205px;
+    }
+    .movie-card-title,
+    .tv-card-title {
+        font-size: 10px;
+    }
+}
